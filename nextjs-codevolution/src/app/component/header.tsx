@@ -1,6 +1,7 @@
 export const Header = () => {
     return (
-        <>Header
-        </>
+        <header style={{ padding: "1rem", backgroundColor: "lightblue" }}>
+            <p>Header</p>
+        </header>
     )
 }
