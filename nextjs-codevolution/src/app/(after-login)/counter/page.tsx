@@ -1,8 +1,8 @@
 import Counter from "./counter";
 
 export const metadata = {
-  title: 'Counter'
-}
+  title: "Counter",
+};
 export default function CounterPage() {
-  return <Counter />
+  return <Counter />;
 }
