@@ -16,7 +16,6 @@ export const generateMetadata = async ({
 
 export default async function ProductDetail({ params }: Props) {
   const productId = (await params).productId;
-  console.log(typeof productId);
   const reviews = [];
   for (let i = 0; i < parseInt(productId); i++) {
     reviews.push(i + 1);
@@ -27,7 +26,7 @@ export default async function ProductDetail({ params }: Props) {
       <h2>Review for product {productId}</h2>
       <ol>
         {reviews.map((review) => (
-          <li>
+          <li key={review}>
             <Link href={`${productId}/reviews/${review}`}>Review {review}</Link>
           </li>
         ))}
