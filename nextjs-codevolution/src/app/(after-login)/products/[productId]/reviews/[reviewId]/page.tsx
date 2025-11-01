@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export default async function ProductReview({
@@ -11,8 +12,15 @@ export default async function ProductReview({
     notFound();
   }
   return (
-    <h1>
-      Review {reviewId} for product {productId}
-    </h1>
+    <>
+      <h1>
+        Review {reviewId} for product {productId}
+      </h1>
+      <div>
+        <Link href={`/products/${productId}`}>
+          Return to product {productId} page
+        </Link>
+      </div>
+    </>
   );
 }
