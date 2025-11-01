@@ -10,7 +10,8 @@ export default async function ProductReview({
 }) {
   const { productId, reviewId } = await params;
 
-  const random = getRandomNumber(10);
+  const random = getRandomNumber(2);
+  console.log("🚀 ~ ProductReview ~ random:", random);
   if (random != 1) {
     throw new Error("Error loading review");
   }
