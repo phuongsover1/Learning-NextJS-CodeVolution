@@ -1,16 +1,21 @@
+import React from "react"
+
 export default function ComplexDashboardLayout({
   children,
   notifications,
   revenue,
-  users
+  users,
+  login
 }:
   {
     children: React.ReactNode,
     notifications: React.ReactNode,
     revenue: React.ReactNode,
     users: React.ReactNode,
+    login: React.ReactNode
   }) {
-  return (
+  const isLogin = Math.floor(Math.random() * 2) == 1
+  return isLogin ? (
     <section>
       <div>
         {children}
@@ -26,5 +31,5 @@ export default function ComplexDashboardLayout({
       </div>
 
     </section>
-  );
+  ): (login)
 }
